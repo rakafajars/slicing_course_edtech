@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:slicing_ecourse/components/app_aset_image.dart';
 import 'package:slicing_ecourse/components/app_color.dart';
 import 'package:slicing_ecourse/components/app_style.dart';
+import 'package:slicing_ecourse/widget/button_global.dart';
 
 class IntroductionScreenPage extends StatefulWidget {
   @override
@@ -122,29 +123,15 @@ class _IntroductionScreenPageState extends State<IntroductionScreenPage> {
                   width: double.infinity,
                   height: 56,
                   margin: EdgeInsets.symmetric(horizontal: 32),
-                  child: ElevatedButton(
-                    onPressed: () {
+                  child: ButtonGlobal(
+                    onTap: () {
                       _pageController.animateToPage(
                         _pageController.page!.toInt() + 1,
                         duration: Duration(milliseconds: 400),
                         curve: Curves.easeIn,
                       );
                     },
-                    child: Text(
-                      currentPage == 2 ? "Let's Start" : "Next",
-                      style: AppTextStyle.rubickH4.copyWith(
-                        fontSize: 16,
-                        color: AppColor.white,
-                      ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      primary: AppColor.red,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                          16,
-                        ),
-                      ),
-                    ),
+                    title: currentPage == 2 ? "Let's Start" : "Next",
                   ),
                 ),
               ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:slicing_ecourse/page/introduction_screen.dart';
+import 'package:slicing_ecourse/page/login/login_page.dart';
 import 'package:slicing_ecourse/page/splash_screen.dart';
 
 void main() {
@@ -16,8 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: IntroductionScreenPage(),
+      home: LoginPage(),
     );
   }
 }
-
